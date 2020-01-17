@@ -1,0 +1,12 @@
+name: finances
+title: finances
+username:
+account: robuchowski
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 1672980
+bundleId: 2736595
+url: https://robuchowski.shinyapps.io/finances/
+when: 1579297578.93255
+asMultiple: FALSE
+asStatic: FALSE

@@ -1,0 +1,49 @@
+---
+title: "Developing Data Products wk 4 Assignment"
+author: "Ryan Obuchowski"
+date: "1/17/2020"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Introduction 
+
+- This presentation is part of the week four assignment in Developing Data Products on Coursera. It's purpose is to pitch an app that I developed using Shiny in Rstudio to help people understand their yearly savings by taking into account their monthly costs and savings 
+- Note: This application takes into account constant monthly income and costs.  Many times, income and costs fluctuate throughout the year. 
+
+
+## Application
+
+1. This application was named **finances** and can be found here:
+
+https://robuchowski.shinyapps.io/finances/
+
+2. In the application, anyone who is interested in projecting their yearly savings can input their monthly income and costs. 
+3. This application allows users to break down their income and costs into distinct categories.
+4. For the Income Category, a user can input their monthly income and vested investments
+5. For Costs Category, a user can input their monthly Rent, Utilities, Insurance, Car Payments, and Food Costs
+
+
+## Example R Code
+
+Below is the R code that is performing the calculations for yearly savings, which yields a yearly savings of **$11,100.**
+
+``` {r, echo= TRUE,}
+income <- 3000;investments <- 25
+monthlyRent <- 800;monthlyUtilities <- 200
+monthlyInsurance <- 300; monthlyCar <- 450
+monthlyFood <- 350
+
+result <- ((income * 12) + (investments * 12)) + ((-monthlyRent * 12) + (-monthlyUtilities * 12) + (-monthlyInsurance * 12) + (-monthlyCar * 12) + (-monthlyFood *12))
+result
+```
+
+## Conclusion
+
+This app can be a useful tool for those interested in financially planning their year by performing a quick calculation of their projected yearly savings. The GitHub repository containg the Shiny programs (ui.R and server.R) can be found here:
+
+https://github.com/robuchowski/DataProductsWk4
+
